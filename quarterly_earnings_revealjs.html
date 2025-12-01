@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarterly Earnings — Interactive Reveal.js</title>
+
+  <!-- Reveal.js from CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/solarized.css" id="theme">
+
+  <!-- Highlight.js stylesheet (will be used by reveal.js highlight plugin) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/default.min.css">
+
+  <style>
+    /* Small custom styling for a professional look */
+    .email-note { font-size: 0.9rem; opacity: 0.9; }
+    .company { font-weight: 700; }
+    code.inline { background: rgba(0,0,0,0.04); padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title slide -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <p class="company">Visionary Arc Films — Q4 Results</p>
+        <p class="email-note">Contact: <a href="mailto:23f3000151@ds.study.iitm.ac.in">23f3000151@ds.study.iitm.ac.in</a></p>
+        <aside class="notes">Welcome stakeholders. Brief intro: agenda and high-level takeaways.</aside>
+      </section>
+
+      <!-- Markdown slide (written in Markdown) -->
+      <section data-markdown>
+        <textarea data-template>
+## Executive Summary (Markdown)
+
+- Revenue grew **8%** quarter-over-quarter.
+- Gross margin improved due to cost optimization.
+- Key risks: supply chain & FX exposure.
+
+**Action items**:
+1. Focus on cost control.
+2. Strengthen hedging program.
+3. Prioritize high-margin projects.
+
+> Prepared by: Financial Reporting Team
+        </textarea>
+        <aside class="notes">Read the bullets, emphasize the two biggest drivers, then transition to the numbers slide.</aside>
+      </section>
+
+      <!-- Slide with animated fragments -->
+      <section>
+        <h2>Revenue Breakdown</h2>
+        <ul>
+          <li class="fragment">Streaming: $14.2M</li>
+          <li class="fragment">Licensing: $8.7M</li>
+          <li class="fragment">Live Events: $3.1M</li>
+          <li class="fragment">Other: $1.0M</li>
+        </ul>
+        <aside class="notes">Click through each fragment to reveal revenue lines one-by-one.</aside>
+      </section>
+
+      <!-- Slide with code sample and syntax highlighting -->
+      <section>
+        <h2>Sample Calculation (Python)</h2>
+        <pre><code class="language-python"># simple margin calc
+revenue = 27000000
+cogs = 17500000
+gross_margin = (revenue - cogs) / revenue
+print(f"Gross margin: {gross_margin:.2%}")</code></pre>
+        <aside class="notes">Show code snippet to illustrate how quick checks are done in our notebooks. Note syntax highlight.</aside>
+      </section>
+
+      <!-- Slide with math (financial formula) -->
+      <section>
+        <h2>Discounted Cash Flow (DCF) — Core Formula</h2>
+        <p>We use the standard DCF formula:</p>
+        <p>$$\text{PV} = \sum_{t=1}^{N} \dfrac{CF_t}{(1+r)^t} + \dfrac{TV}{(1+r)^N}$$</p>
+        <p>Where \(TV = \dfrac{CF_{N+1}}{r - g}\)</p>
+        <aside class="notes">Explain assumptions: discount rate r, growth g, and terminal value methodology.</aside>
+      </section>
+
+      <!-- Slide with speaker notes and a live link to email -->
+      <section>
+        <h2>Contact & Next Steps</h2>
+        <p>Questions? Reach out: <a href="mailto:23f3000151@ds.study.iitm.ac.in">23f3000151@ds.study.iitm.ac.in</a></p>
+        <ol>
+          <li class="fragment">Share full data pack with audit team.</li>
+          <li class="fragment">Schedule follow-up with budgeting.</li>
+          <li class="fragment">Approve guidance updates.</li>
+        </ol>
+        <aside class="notes">Close by asking for approvals and confirming the timeline.</aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js and plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/math/math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/notes/notes.js"></script>
+
+  <!-- MathJax - used by reveal math plugin -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    // Initialize Reveal with necessary plugins
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
+      math: {
+        // MathJax loaded via CDN above
+        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+      }
+    });
+  </script>
+
+</body>
+</html>
